@@ -10,7 +10,7 @@ import imp
 import sys
 import json
 import auth_keys
-import basic_and_general_info
+import user_and_tweet_info
 import write_and_read_objects
 import users_retweeted_most
 
@@ -35,7 +35,7 @@ def main():
 	
    # Switch between accessing the API or accessing the text file
 	offline_mode = True
-	# Switch between and using GUI or not
+	# Switch between using GUI or not
  	use_gui = False 
 	
 	if (offline_mode == True): # Access the stored tweet objects instead of API
@@ -82,8 +82,8 @@ def get_user_data(user_name, window):
 	#print tweet["text"]
 	#pass
 
-	#basic_and_general_info.show_basic_info(tweet_object_list)
-	#basic_and_general_info.show_general_info(tweet_object_list)
+	#user_and_tweet_info.show_user_info(tweet_object_list)
+	#user_and_tweet_info.show_tweet_info(tweet_object_list)
 
 	#users_retweeted_most.show_users_retweeted_most(tweet_object_list)
 
@@ -95,8 +95,8 @@ def get_user_data(user_name, window):
 
 def non_gui_testing(tweet_object_list):
 
-	basic_and_general_info.show_basic_info(tweet_object_list)
-	basic_and_general_info.show_general_info(tweet_object_list)
+	user_and_tweet_info.show_user_info(tweet_object_list)
+	user_and_tweet_info.show_tweet_info(tweet_object_list)
 
 	users_retweeted_most.show_users_retweeted_most(tweet_object_list)
 	pass

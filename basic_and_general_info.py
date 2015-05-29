@@ -1,8 +1,15 @@
+'''
+Application: Twitter Dashboard 
+Author:      David Noftsier
+
+user_and_tweet_info.py
+'''
+
 import json
 from datetime import datetime
 import collections
 
-def show_basic_info(tweet_object_list):
+def show_user_info(tweet_object_list):
 
 	print 'Name: ' + tweet_object_list[0]['user']['name'] # Name of the account owner
 	print 'Screen Name: ' + tweet_object_list[0]['user']['screen_name'] # Screen name 
@@ -18,7 +25,7 @@ def show_basic_info(tweet_object_list):
 	age = (datetime.now() - account_creation).days        # Account Age in days
 	print 'Account Age: ' + str(age / 365) + ' Years, ' + str(age % 365) + ' days'   # Formatting
 
-def show_general_info(tweet_object_list):
+def show_tweet_info(tweet_object_list):
 
 	account_creation = datetime.strptime(tweet_object_list[0]['user']['created_at'], '%a %b %d %H:%M:%S +0000 %Y')
 	age = (datetime.now() - account_creation).days        # Account Age in days

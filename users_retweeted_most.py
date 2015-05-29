@@ -1,3 +1,10 @@
+'''
+Application: Twitter Dashboard 
+Author:      David Noftsier
+
+users_retweeted_most.py shows which users our target user retweeted the most frequently.
+'''
+
 import json
 import collections
 
@@ -34,7 +41,7 @@ def show_users_retweeted_most(tweet_object_list):
     top_five_retweetees =  collections.Counter(retweetees).most_common(5)
     print 'Top 5 Users Most Often Retweeted: '
     for user, occurrences in top_five_retweetees:
-        print '\t\t\t\t%s' %user
+        print '\t\t\t%s' %user
     # Include number of occurrences? 
     #for hashtag,occurrences in top_five_hashtags:
         # print "%s is used %s times" %(hashtag,occurences)

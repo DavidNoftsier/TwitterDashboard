@@ -1,7 +1,7 @@
 import json
 import collections
 
-def showUsersRetweetedMost(tweet_object_list):
+def show_users_retweeted_most(tweet_object_list):
 
     retweets = []
     retweetees = [] 
@@ -19,15 +19,15 @@ def showUsersRetweetedMost(tweet_object_list):
         temp_string = ''
         retweetee = ''
         temp_string = retweets[count]
-        atAndColonCount = 0
+        at_and_colon_count = 0
         for i in range(0, len(temp_string)):
-            if atAndColonCount > 1:
+            if at_and_colon_count > 1:
                 break
-            if atAndColonCount == 1:
+            if at_and_colon_count == 1:
                 retweetee = retweetee + temp_string[i]
             if temp_string[i] == '@' or (i + 1 < len(temp_string) and temp_string[i + 1] == ':'):
             #if temp_string[i] == '@' or temp_string[i + 1] == ':': 
-                atAndColonCount+=1
+                at_and_colon_count+=1
         retweetees.append(retweetee)
         count+=1   
 

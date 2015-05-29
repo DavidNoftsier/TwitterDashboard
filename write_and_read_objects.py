@@ -1,7 +1,16 @@
+'''
+Application: Twitter Dashboard 
+Author:      David Noftsier
+
+write_and_read_objects.py allows the application developer store tweet objects by accessing the 
+Twitter API once, and then makes the tweet objects available for offline testing. This circumvents
+the problem of exceeding the Twitter API rate limits.
+'''
+
 import tweepy
 import json
 
-def writeTweetObjectsToFile(api, user_name): 
+def write_tweet_objects_to_file(api, user_name): 
 
 	tweet_object_list = []
 
@@ -14,7 +23,7 @@ def writeTweetObjectsToFile(api, user_name):
 	return tweet_object_list  
 
 # This is only for reading from the text file - when using the app in real time this will not be called
-def readJsonFile():
+def read_json_file():
 
 	tweet_object_list = []
 

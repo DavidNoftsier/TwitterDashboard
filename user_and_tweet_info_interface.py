@@ -141,7 +141,7 @@ def show_users_retweeted_most(tweet_object_list, canvas):
                 break
             if at_and_colon_count == 1:
                 retweetee = retweetee + temp_string[i]
-            if temp_string[i] == '@' or (i + 1 < len(temp_string) and temp_string[i + 1] == ':'):
+            if temp_string[i] == '@' or (i + 1 < len(temp_string) and (temp_string[i + 1] == ':')):
             #if temp_string[i] == '@' or temp_string[i + 1] == ':': 
                 at_and_colon_count+=1
         retweetees.append(retweetee)

@@ -10,9 +10,8 @@ import imp
 import sys
 import json
 import auth_keys
-import user_and_tweet_info
 import write_and_read_objects
-import users_retweeted_most
+import user_and_tweet_info
 
 # utf check
 imp.reload(sys)
@@ -77,28 +76,13 @@ def get_user_data(user_name, window):
 	# Only used for testing (when you have previously generated 'tweet_objects.txt' don't exceed your access limit)
 	#tweet_object_list = write_and_read_objects. write_tweet_objects_to_file()
 
-	# Example for getting the statuses of tweet objects
-	#for tweet in tweet_object_list:
-	#print tweet["text"]
-	#pass
-
-	#user_and_tweet_info.show_user_info(tweet_object_list)
-	#user_and_tweet_info.show_tweet_info(tweet_object_list)
-
-	#users_retweeted_most.show_users_retweeted_most(tweet_object_list)
-
- 
-	#sent.getSentiment(tweet_statuses, window)
-	#for user in tweepy.Cursor(api.followers, screen_name = user_name).items():
-		#print user.screen_name
-
 
 def non_gui_testing(tweet_object_list):
 
 	user_and_tweet_info.show_user_info(tweet_object_list)
 	user_and_tweet_info.show_tweet_info(tweet_object_list)
 
-	users_retweeted_most.show_users_retweeted_most(tweet_object_list)
+	user_and_tweet_info.show_users_retweeted_most(tweet_object_list)
 	pass
 
 

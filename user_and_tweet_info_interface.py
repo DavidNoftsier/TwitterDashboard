@@ -148,7 +148,7 @@ def show_users_retweeted_most(tweet_object_list, canvas):
         count+=1   
 
     top_five_retweetees =  collections.Counter(retweetees).most_common(5)
-    canvas.create_text(150, 490, anchor='w', text='Top Five Users Most Often Retweeted', font=("Helvetica", 24)) 
+    canvas.create_text(150, 490, anchor='w', text='Top Five Retweeted Users', font=("Helvetica", 24)) 
     count = 0
     for user, occurrences in top_five_retweetees:
         canvas.create_text(150, 510+(count*20), anchor='w', text='%s' %user, font=("Helvetica", 20)) 

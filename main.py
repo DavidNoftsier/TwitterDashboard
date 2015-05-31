@@ -55,27 +55,6 @@ def main():
         		tweet_object_list = write_and_read_objects. write_tweet_objects_to_file(api, user_name)
         		non_gui_testing(tweet_object_list)	
 
-def get_user_data(user_name, window):
-	print(user_name)
-
-	# Storing a list of statuses
-	'''
-	tweet_statuses = []
-	count = 0
-	for tweet in tweet_object_list:
-		tweet_statuses.append(tweet['text'])
-		count += 1
-		if count > 99:
-  			break
-	'''
-
-	# This generates the 'tweet_objects.txt' and returns tweet_object_list
-	#tweet_object_list = write_and_read_objects. write_tweet_objects_to_file(api, user_name)
-
-	# Only used for testing (when you have previously generated 'tweet_objects.txt' don't exceed your access limit)
-	#tweet_object_list = write_and_read_objects. write_tweet_objects_to_file()
-
-
 def non_gui_testing(tweet_object_list):
 
 	user_and_tweet_info.show_user_info(tweet_object_list)

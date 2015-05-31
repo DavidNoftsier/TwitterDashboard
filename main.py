@@ -35,7 +35,7 @@ def main():
 
 
    # Switch between accessing the API or accessing the text file
-	access_api = True 
+	access_api = False 
 	# Switch between using GUI or not
  	use_gui = True 
 
